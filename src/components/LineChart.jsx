@@ -15,17 +15,17 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   };
 
   const brColor = () => {
-    if(coinHistory?.data?.change >= 0){
+    if (coinHistory?.data?.change >= 0) {
       return '#00FF00'
-    }else{
+    } else {
       return '#ff0000'
     }
   }
 
   const bgColor = () => {
-    if(coinHistory?.data?.change >= 0){
+    if (coinHistory?.data?.change >= 0) {
       return '#88B04B'
-    }else{
+    } else {
       return '#DD4124'
     }
   }
@@ -45,12 +45,14 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
 
   const options = {
     scales: {
-      y: {
-        ticks: {
-          beginAtZero: true,
-        },
-      },
-    },
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        }
+      ]
+    }
   };
 
 

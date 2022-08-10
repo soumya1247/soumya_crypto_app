@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button, Result, Layout } from 'antd';
+import { Link } from 'react-router-dom'
 // import millify from 'millify';
 // import { Collapse, Row, Col, Typography, Avatar } from 'antd';
 import { Row, Col } from 'antd';
@@ -11,21 +13,21 @@ import { Row, Col } from 'antd';
 // const { Panel } = Collapse;
 
 const Exchanges = () => {
-//   const { data, isFetching } = useGetExchangesQuery();
-//   const exchangesList = data?.data?.exchanges;
-//  // Note: To access this endpoint you need premium plan
-//   if (isFetching) return <Loader />;
+  //   const { data, isFetching } = useGetExchangesQuery();
+  //   const exchangesList = data?.data?.exchanges;
+  //  // Note: To access this endpoint you need premium plan
+  //   if (isFetching) return <Loader />;
 
   return (
     <>
-      <Row>
+      {/* <Row>
         <Col span={6}>Exchanges</Col>
         <Col span={6}>24h Trade Volume</Col>
         <Col span={6}>Markets</Col>
         <Col span={6}>Change</Col>
       </Row>
-      <Row>
-        {/* {exchangesList.map((exchange) => (
+      <Row> */}
+      {/* {exchangesList.map((exchange) => (
           <Col span={24}>
             <Collapse>
               <Panel
@@ -49,7 +51,18 @@ const Exchanges = () => {
             </Collapse>
           </Col>
         ))} */}
-      </Row>
+      {/* </Row> */}
+      <Layout style={{height:"85vh"}}>
+      <Result
+        status="404"
+        title="Coming Soon"
+        subTitle="Sorry, Exchanges are not here yet."
+        extra={
+        <Button type="primary">
+          <Link to='/'>Back to Home</Link>
+        </Button>}
+      />
+      </Layout>
     </>
   );
 };

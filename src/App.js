@@ -27,8 +27,9 @@ function App() {
         <div className="footer">
           <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
            ©CryptoArena <br />
-            All Rights Reserverd
+            All Rights Reserved
           </Typography.Title>
+          {/* Ant design way of saying that this is a div but there will be spaces between items */}
           <Space>
             <Link to='/'>Home</Link>
             <Link to='/exchanges'>Exchanges</Link>
