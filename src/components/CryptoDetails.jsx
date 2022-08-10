@@ -31,7 +31,7 @@ function CryptoDetails() {
     { title: 'Rank', value: cryptoDetails?.rank, icon: <NumberOutlined /> },
     // { title: '24h Volume', value: `$ ${cryptoDetails?.["24hVolume"] && millify(cryptoDetails?.["24hVolume"])}`, icon: <ThunderboltOutlined /> },
     { title: 'Market Cap', value: `$ ${cryptoDetails?.marketCap && millify(cryptoDetails?.marketCap)}`, icon: <DollarCircleOutlined /> },
-    { title: 'All-time-high(daily avg.)', value: `$ ${cryptoDetails?.allTimeHigh?.price && millify(cryptoDetails?.allTimeHigh?.price)}`, icon: <TrophyOutlined /> },
+    { title: 'All-time-high', value: `$ ${cryptoDetails?.allTimeHigh?.price && millify(cryptoDetails?.allTimeHigh?.price)}`, icon: <TrophyOutlined /> },
   ];
 
   const genericStats = [
@@ -49,8 +49,8 @@ function CryptoDetails() {
           {data?.data?.coin.name} ({data?.data?.coin.symbol}) Price
         </Title>
         <p>
-          {data?.data?.coin.name} live price in US dollars.
-          View value statistics, market cap and supply.
+          {data?.data?.coin.name} live price in USD.
+          View other Important Stats, Market Cap and Supply.
         </p>
       </Col>
       <Select
@@ -107,6 +107,7 @@ function CryptoDetails() {
         <Row className='coin-desc' >
           <Title level={3} className='coin-details-heading' >
             What is {cryptoDetails.name}
+            {/* Description is raw HTML.So we are using HTMLReactParser */}
             {HTMLReactParser(cryptoDetails.description)}
           </Title>
         </Row>

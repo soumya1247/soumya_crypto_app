@@ -24,6 +24,7 @@ function News({ simplified }) {
       {!simplified && (
         <Col span={24}>
           <Select
+            defaultValue={'Cryptocurrency'}
             showSearch
             className='select-news'
             placeholder='Select a Crypto'
